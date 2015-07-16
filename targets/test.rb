@@ -8,7 +8,7 @@ class TestTarget
   private
 
   def post
-    puts "posting #{self} to #{identify}"
+    $logger.info("posting #{self} to #{identify}")
   end
 
 end

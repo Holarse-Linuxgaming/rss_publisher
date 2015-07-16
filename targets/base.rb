@@ -13,10 +13,10 @@ module Target
         post
         mark_as_posted
       rescue => e
-	puts "Fehler beim Posten auf #{identify}: #{e.message}"
+	$logger.fatal("Fehler beim Posten auf #{identify}: #{e.message}")
       end
     else
-      puts "skipping #{self.to_s} auf #{identify}"
+      $logger.info("skipping #{self.to_s} auf #{identify}")
     end	
   end
 
